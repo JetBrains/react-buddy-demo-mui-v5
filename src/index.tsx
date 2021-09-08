@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { useInitial } from './dev/hook';
 import { ComponentPreviews } from './dev/previews';
-import { DevSupport } from '@haulmont/react-ide-toolbox';
+import { DevSupport } from '@react-buddy/ide-toolbox';
 
 ReactDOM.render(
   <React.StrictMode>

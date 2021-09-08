@@ -4,14 +4,14 @@ import {
   Component,
   Variant,
   Palette,
-} from '@haulmont/react-ide-toolbox';
+} from '@react-buddy/ide-toolbox';
 
 export default () => (
   <Palette>
     <Category name="Text">
       <Component name="Hello meessage">
         <Variant>
-          <span> Hello, Haulmont Create React App! </span>
+          <span> Hello, Create React Buddy App! </span>
         </Variant>
       </Component>
     </Category>

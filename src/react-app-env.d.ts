@@ -1,1 +1,1 @@
-/// <reference types="@haulmont/react-scripts" />
+/// <reference types="@react-buddy/react-scripts" />

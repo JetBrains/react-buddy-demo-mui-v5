@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { InitialHookStatus } from '@haulmont/react-ide-toolbox';
+import { InitialHookStatus } from '@react-buddy/ide-toolbox';
 
 export const useInitial: () => InitialHookStatus = () => {
   const [status, setStatus] = useState<InitialHookStatus>({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Previews, ComponentPreview } from '@haulmont/react-ide-toolbox';
+import { Previews, ComponentPreview } from '@react-buddy/ide-toolbox';
 import App from '../App';
 
 export const ComponentPreviews = () => {
