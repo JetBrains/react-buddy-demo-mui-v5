@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.0-rc.0",
     "@mui/material": "^5.0.0-rc.0",
     "@react-buddy/ide-toolbox": "^1.0.0",
     "@react-buddy/react-scripts": "^1.0.0",
