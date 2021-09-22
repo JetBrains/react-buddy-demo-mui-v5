@@ -146,7 +146,7 @@ export default () => (
         </Variant>
       </Component>
       <Component name="Button Group">
-        <Variant name="contained" requiredParams={["variant"]}>
+        <Variant name="contained">
           <ButtonGroup variant="contained" aria-label="outlined primary button group">
             <Button>One</Button>
             <Button>Two</Button>
