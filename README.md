@@ -1,2 +1,1 @@
-Find minimal example of the app bootstrapped with `create-react-buddy-app` in 
-[react-buddy-app](react-buddy-app) directory
+Example application with [MUI](https://github.com/mui-org/material-ui) v5 Palette.
