@@ -10,10 +10,10 @@ import {
   Box, Breadcrumbs,
   Button, ButtonGroup, Checkbox,
   Container,
-  Divider, Fab, FormControl, FormControlLabel, FormGroup, FormLabel, Grid,
+  Divider, Drawer, Fab, FormControl, FormControlLabel, FormGroup, FormLabel, Grid,
   IconButton,
   ImageList,
-  ImageListItem, InputLabel, Link, MenuItem, Radio, RadioGroup, Rating, Select, Slider,
+  ImageListItem, InputLabel, Link, List, ListItem, ListItemText, MenuItem, Radio, RadioGroup, Rating, Select, Slider,
   Stack, Switch,
   TextField, ToggleButton, ToggleButtonGroup, Typography
 } from '@mui/material';
@@ -122,7 +122,7 @@ export default () => (
           <Button variant="text">Text</Button>
         </Variant>
         <Variant name="contained">
-          <Button variant="contained">Contained</Button>
+          <Button variant="contained" sx={{my: 2}}>Contained</Button>
         </Variant>
         <Variant name="outlined">
           <Button variant="outlined">Outlined</Button>
@@ -146,7 +146,7 @@ export default () => (
         </Variant>
       </Component>
       <Component name="Button Group">
-        <Variant name="contained">
+        <Variant name="contained" requiredParams={["variant"]}>
           <ButtonGroup variant="contained" aria-label="outlined primary button group">
             <Button>One</Button>
             <Button>Two</Button>
@@ -313,6 +313,25 @@ export default () => (
               </Link>
               <Typography color="text.primary">Item</Typography>
             </Breadcrumbs>
+          </Variant>
+        </Component>
+        <Component name="Drawer">
+          <Variant>
+            <Drawer open={true} variant={"persistent"}>
+              <List>
+                <ListItem>
+                  <ListItemText>Item1</ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemText>Item2</ListItemText>
+                </ListItem>
+              </List>
+            </Drawer>
+          </Variant>
+        </Component>
+        <Component name="Link">
+          <Variant>
+            <Link href="#">Link</Link>
           </Variant>
         </Component>
       </Category>
