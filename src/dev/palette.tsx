@@ -6,26 +6,54 @@ import {
   Palette,
 } from '@react-buddy/ide-toolbox';
 import {
-  Autocomplete, BottomNavigation, BottomNavigationAction,
-  Box, Breadcrumbs,
-  Button, ButtonGroup, Checkbox,
+  Autocomplete,
+  BottomNavigation,
+  BottomNavigationAction,
+  Box,
+  Breadcrumbs,
+  Button,
+  ButtonGroup,
+  Checkbox,
   Container,
-  Divider, Drawer, Fab, FormControl, FormControlLabel, FormGroup, FormLabel, Grid,
+  Divider,
+  Drawer,
+  Fab,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  FormLabel,
+  Grid,
   IconButton,
   ImageList,
-  ImageListItem, InputLabel, Link, List, ListItem, ListItemText, MenuItem, Radio, RadioGroup, Rating, Select, Slider,
-  Stack, Switch,
-  TextField, ToggleButton, ToggleButtonGroup, Typography
+  ImageListItem,
+  InputLabel,
+  Link,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  MenuItem, MenuList, Pagination,
+  Radio,
+  RadioGroup,
+  Rating,
+  Select,
+  Slider, SpeedDial, SpeedDialAction, SpeedDialIcon,
+  Stack, Step, StepLabel, Stepper,
+  Switch, Tab, Tabs,
+  TextField,
+  ToggleButton,
+  ToggleButtonGroup,
+  Typography
 } from '@mui/material';
 import {
-    Add,
-    Delete,
-    Edit,
-    Favorite,
-    FavoriteBorder,
-    FormatAlignCenter, FormatAlignJustify,
-    FormatAlignLeft,
-    FormatAlignRight, LocationOn, Restore
+  Add, Cloud, ContentCopy, ContentCut, ContentPaste,
+  Delete,
+  Edit,
+  Favorite,
+  FavoriteBorder,
+  FormatAlignCenter, FormatAlignJustify,
+  FormatAlignLeft,
+  FormatAlignRight, LocationOn, Print, Restore, Save, Share
 } from '@mui/icons-material';
 
 export default () => (
@@ -332,6 +360,96 @@ export default () => (
         <Component name="Link">
           <Variant>
             <Link href="#">Link</Link>
+          </Variant>
+        </Component>
+        <Component name="Menu">
+          <Variant>
+            <MenuList>
+              <MenuItem>
+                <ListItemIcon>
+                  <ContentCut fontSize="small" />
+                </ListItemIcon>
+                <ListItemText>Cut</ListItemText>
+                <Typography variant="body2" color="text.secondary">
+                  ⌘X
+                </Typography>
+              </MenuItem>
+              <MenuItem>
+                <ListItemIcon>
+                  <ContentCopy fontSize="small" />
+                </ListItemIcon>
+                <ListItemText>Copy</ListItemText>
+                <Typography variant="body2" color="text.secondary">
+                  ⌘C
+                </Typography>
+              </MenuItem>
+              <MenuItem>
+                <ListItemIcon>
+                  <ContentPaste fontSize="small" />
+                </ListItemIcon>
+                <ListItemText>Paste</ListItemText>
+                <Typography variant="body2" color="text.secondary">
+                  ⌘V
+                </Typography>
+              </MenuItem>
+              <Divider />
+              <MenuItem>
+                <ListItemIcon>
+                  <Cloud fontSize="small" />
+                </ListItemIcon>
+                <ListItemText>Web Clipboard</ListItemText>
+              </MenuItem>
+            </MenuList>
+          </Variant>
+        </Component>
+        <Component name="Pagination">
+          <Variant>
+            <Pagination count={10} />
+          </Variant>
+        </Component>
+        <Component name="SpeedDial">
+          <Variant>
+            <SpeedDial
+                ariaLabel="SpeedDial basic example"
+                sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                icon={<SpeedDialIcon />}>
+              <SpeedDialAction
+                  key={'Save'}
+                  icon={<Save/>}
+                  tooltipTitle={'Save'}/>
+              <SpeedDialAction
+                      key={'Share'}
+                      icon={<Share/>}
+                      tooltipTitle={'Share'}/>
+              <SpeedDialAction
+                      key={'Print'}
+                      icon={<Print/>}
+                      tooltipTitle={'Print'}/>
+            </SpeedDial>
+          </Variant>
+        </Component>
+        <Component name="Stepper">
+          <Variant>
+            <Stepper activeStep={1} alternativeLabel>
+              <Step key={'Select master blaster campaign settings'}>
+                <StepLabel>{'Select master blaster campaign settings'}</StepLabel>
+              </Step>
+              <Step key={'Create an ad group'}>
+                <StepLabel>{'Create an ad group'}</StepLabel>
+              </Step>
+              <Step key={'Create an ad'}>
+                <StepLabel>{'Create an ad'}</StepLabel>
+              </Step>
+            </Stepper>
+          </Variant>
+        </Component>
+        <Component name="Tabs">
+          <Variant>
+            <Tabs value={0} aria-label="basic tabs example">
+              <Tab label="Item One" />
+              <Tab label="Item Two" />
+              <Tab label="Item Three" />
+            </Tabs>
           </Variant>
         </Component>
       </Category>
