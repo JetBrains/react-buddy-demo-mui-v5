@@ -134,6 +134,89 @@ export default () => (
         </Variant>
       </Component>
     </Category>
+    <Category name="Typography">
+      <Component name="h1">
+        <Variant>
+          <Typography variant="h1" gutterBottom component="h1">Heading 1</Typography>
+        </Variant>
+      </Component>
+      <Component name="h2">
+        <Variant>
+          <Typography variant="h2" gutterBottom component="h2">Heading 2</Typography>
+        </Variant>
+      </Component>
+      <Component name="h3">
+        <Variant>
+          <Typography variant="h3" gutterBottom component="h3">Heading 3</Typography>
+        </Variant>
+      </Component>
+      <Component name="h4">
+        <Variant>
+          <Typography variant="h4" gutterBottom component="h4">Heading 4</Typography>
+        </Variant>
+      </Component>
+      <Component name="h5">
+        <Variant>
+          <Typography variant="h5" gutterBottom component="h5">Heading 5</Typography>
+        </Variant>
+      </Component>
+      <Component name="h6">
+        <Variant>
+          <Typography variant="h6" gutterBottom component="h6">Heading 6</Typography>
+        </Variant>
+      </Component>
+      <Component name="subtitle1">
+        <Variant>
+          <Typography variant="subtitle1" gutterBottom component="div">
+            subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur
+          </Typography>
+        </Variant>
+      </Component>
+      <Component name="subtitle2">
+        <Variant>
+          <Typography variant="subtitle2" gutterBottom component="div">
+            subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur
+          </Typography>
+        </Variant>
+      </Component>
+      <Component name="body1">
+        <Variant>
+          <Typography variant="body1" gutterBottom>
+            body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+            neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+            quasi quidem quibusdam.
+          </Typography>
+        </Variant>
+      </Component>
+      <Component name="body2">
+        <Variant>
+          <Typography variant="body2" gutterBottom>
+            body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+            blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
+            neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
+            quasi quidem quibusdam.
+          </Typography>
+        </Variant>
+      </Component>
+      <Component name="button (typography)">
+        <Variant>
+          <Typography variant="button" display="block" gutterBottom>button text</Typography>
+        </Variant>
+      </Component>
+      <Component name="caption">
+        <Variant>
+          <Typography variant="caption" display="block" gutterBottom>caption text</Typography>
+        </Variant>
+      </Component>
+      <Component name="overline">
+        <Variant>
+          <Typography variant="overline" display="block" gutterBottom>overline text</Typography>
+        </Variant>
+      </Component>
+    </Category>
     <Category name="Inputs">
       <Component name="Autocomplete">
         <Variant>
@@ -468,15 +551,15 @@ export default () => (
       </Component>
       <Component name="Chip">
         <Variant>
-          <Chip label="Chip Filled" />
+          <Chip label="Chip Filled"/>
         </Variant>
         <Variant name="filled">
-          <Chip label="Chip Outlined" variant="outlined" />
+          <Chip label="Chip Outlined" variant="outlined"/>
         </Variant>
       </Component>
       <Component name="Divider">
         <Variant>
-          <Divider />
+          <Divider/>
         </Variant>
       </Component>
       <Component name="List">
@@ -485,17 +568,17 @@ export default () => (
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <Inbox />
+                  <Inbox/>
                 </ListItemIcon>
-                <ListItemText primary="Inbox" />
+                <ListItemText primary="Inbox"/>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <Drafts />
+                  <Drafts/>
                 </ListItemIcon>
-                <ListItemText primary="Drafts" />
+                <ListItemText primary="Drafts"/>
               </ListItemButton>
             </ListItem>
           </List>
