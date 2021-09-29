@@ -6,15 +6,16 @@ import {
   Palette,
 } from '@react-buddy/ide-toolbox';
 import {
-  Autocomplete, Avatar, AvatarGroup, Badge,
+  Alert,
+  Autocomplete, Avatar, AvatarGroup, Backdrop, Badge,
   BottomNavigation,
   BottomNavigationAction,
   Box,
   Breadcrumbs,
   Button,
   ButtonGroup,
-  Checkbox, Chip,
-  Container,
+  Checkbox, Chip, CircularProgress,
+  Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,
   Divider,
   Drawer,
   Fab,
@@ -26,7 +27,7 @@ import {
   IconButton,
   ImageList,
   ImageListItem,
-  InputLabel,
+  InputLabel, LinearProgress,
   Link,
   List,
   ListItem, ListItemButton,
@@ -36,8 +37,8 @@ import {
   Radio,
   RadioGroup,
   Rating,
-  Select,
-  Slider, SpeedDial, SpeedDialAction, SpeedDialIcon,
+  Select, Skeleton,
+  Slider, Snackbar, SpeedDial, SpeedDialAction, SpeedDialIcon,
   Stack, Step, StepLabel, Stepper,
   Switch, Tab, Tabs,
   TextField,
@@ -589,6 +590,89 @@ export default () => (
           <Tooltip title="Add" arrow>
             <Button>Arrow</Button>
           </Tooltip>
+        </Variant>
+      </Component>
+    </Category>
+    <Category name="Feedback">
+      <Component name="Alert">
+        <Variant name="error">
+          <Alert severity="error">This is an error alert — check it out!</Alert>
+        </Variant>    
+        <Variant name="warning">
+          <Alert severity="warning">This is a warning alert — check it out!</Alert>
+        </Variant>
+        <Variant name="info">
+          <Alert severity="info">This is an info alert — check it out!</Alert>
+        </Variant>
+        <Variant name="success">
+          <Alert severity="success">This is a success alert — check it out!</Alert>
+        </Variant>
+      </Component>
+      <Component name="Backdrop">
+        <Variant>
+          <Backdrop open={true}>
+            <CircularProgress color="inherit" />
+          </Backdrop>
+        </Variant>
+      </Component>
+      <Component name="Dialog">
+        <Variant>
+          <Dialog
+            open={true}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+            <DialogTitle id="alert-dialog-title">
+              {"Use Google's location service?"}
+            </DialogTitle>
+            <DialogContent>
+              <DialogContentText id="alert-dialog-description">
+                Let Google help apps determine location. This means sending anonymous
+                location data to Google, even when no apps are running.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button>Disagree</Button>
+              <Button autoFocus>
+                Agree
+              </Button>
+            </DialogActions>
+          </Dialog>
+        </Variant>
+      </Component>
+      <Component name="Progress">
+        <Variant name="circular">
+          <CircularProgress />
+        </Variant>
+        <Variant name="linear">
+          <LinearProgress />
+        </Variant>
+      </Component>
+      <Component name="Skeleton">
+        <Variant>
+          <Stack spacing={1}>
+            <Skeleton variant="text" />
+            <Skeleton variant="circular" width={40} height={40} />
+            <Skeleton variant="rectangular" width={210} height={118} />
+          </Stack>
+        </Variant>
+        <Variant name="text">
+          <Skeleton variant="text" />
+        </Variant>
+        <Variant name="circular">
+          <Skeleton variant="circular" />
+        </Variant>
+        <Variant name="rectangular">
+          <Skeleton variant="rectangular" />
+        </Variant>
+      </Component>
+      <Component name="Snackbar">
+        <Variant>
+          <Snackbar
+            open={true}
+            autoHideDuration={6000}
+            message="Note archived"
+          />
         </Variant>
       </Component>
     </Category>
