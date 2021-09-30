@@ -6,14 +6,15 @@ import {
   Palette,
 } from '@react-buddy/ide-toolbox';
 import {
-  Alert,
+  Accordion, AccordionDetails, AccordionSummary,
+  Alert, AppBar,
   Autocomplete, Avatar, AvatarGroup, Backdrop, Badge,
   BottomNavigation,
   BottomNavigationAction,
   Box,
   Breadcrumbs,
   Button,
-  ButtonGroup,
+  ButtonGroup, Card, CardActions, CardContent,
   Checkbox, Chip, CircularProgress,
   Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,
   Divider,
@@ -33,7 +34,7 @@ import {
   ListItem, ListItemButton,
   ListItemIcon,
   ListItemText,
-  MenuItem, MenuList, Pagination,
+  MenuItem, MenuList, Pagination, Paper,
   Radio,
   RadioGroup,
   Rating,
@@ -43,18 +44,18 @@ import {
   Switch, Tab, Tabs,
   TextField,
   ToggleButton,
-  ToggleButtonGroup, Tooltip,
+  ToggleButtonGroup, Toolbar, Tooltip,
   Typography
 } from '@mui/material';
 import {
   Add, Cloud, ContentCopy, ContentCut, ContentPaste,
   Delete, Drafts,
-  Edit,
+  Edit, ExpandMore,
   Favorite,
   FavoriteBorder,
   FormatAlignCenter, FormatAlignJustify,
   FormatAlignLeft,
-  FormatAlignRight, Inbox, LocationOn, Mail, Print, Restore, Save, Share
+  FormatAlignRight, Inbox, LocationOn, Mail, Menu, Print, Restore, Save, Share
 } from '@mui/icons-material';
 
 export default () => (
@@ -673,6 +674,122 @@ export default () => (
             autoHideDuration={6000}
             message="Note archived"
           />
+        </Variant>
+      </Component>
+    </Category>
+    <Category name="Surfaces">
+      <Component name="Accordion">
+        <Variant>
+          <Stack>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMore />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>Accordion 1</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                  malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMore />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <Typography>Accordion 2</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                  malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </Stack>
+        </Variant>
+      </Component>
+      <Component name="AppBar">
+        <Variant>
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+              >
+                <Menu />
+              </IconButton>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                News
+              </Typography>
+              <Button color="inherit">Login</Button>
+            </Toolbar>
+          </AppBar>
+        </Variant>
+      </Component>
+      <Component name="Card">
+        <Variant>
+          <Card variant="outlined">
+            <CardContent>
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                Word of the Day
+              </Typography>
+              <Typography variant="h5" component="div">
+                benevolent
+              </Typography>
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                adjective
+              </Typography>
+              <Typography variant="body2">
+                well meaning and kindly.
+                <br />
+                {'"a benevolent smile"'}
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Learn More</Button>
+            </CardActions>
+          </Card>
+        </Variant>
+      </Component>
+      <Component name="Paper">
+        <Variant>
+          <Paper>elevation 0</Paper>
+        </Variant>
+        <Variant name="elevation 1">
+          <Paper elevation={1}>elevation 1</Paper>
+        </Variant>
+        <Variant name="elevation 2">
+          <Paper elevation={2}>elevation 2</Paper>
+        </Variant>
+        <Variant name="elevation 3">
+          <Paper elevation={3}>elevation 3</Paper>
+        </Variant>
+        <Variant name="elevation 4">
+          <Paper elevation={4}>elevation 4</Paper>
+        </Variant>
+        <Variant name="elevation 6">
+          <Paper elevation={6}>elevation 6</Paper>
+        </Variant>
+        <Variant name="elevation 8">
+          <Paper elevation={8}>elevation 8</Paper>
+        </Variant>
+        <Variant name="elevation 12">
+          <Paper elevation={12}>elevation 12</Paper>
+        </Variant>
+        <Variant name="elevation 16">
+          <Paper elevation={16}>elevation 16</Paper>
+        </Variant>
+        <Variant name="elevation 24">
+          <Paper elevation={24}>elevation 24</Paper>
         </Variant>
       </Component>
     </Category>
