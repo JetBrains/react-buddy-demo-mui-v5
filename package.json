@@ -7,7 +7,7 @@
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.1",
-    "@react-buddy/ide-toolbox": "^1.1.0-dev.0",
+    "@react-buddy/ide-toolbox": "^1.0.0",
     "@react-buddy/react-scripts": "^1.0.0",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
