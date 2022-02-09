@@ -57,8 +57,9 @@ import {
   FormatAlignLeft,
   FormatAlignRight, Inbox, LocationOn, Mail, Menu, Print, Restore, Save, Share
 } from '@mui/icons-material';
+import ReactDOM from 'react-dom';
 
-export default () => (
+const PaletteThree = () => (
   <Palette>
     <Category name="Layout">
       <Component name="Box">
@@ -795,3 +796,5 @@ export default () => (
     </Category>
   </Palette>
 );
+
+export default PaletteThree;
