@@ -57,6 +57,11 @@ import {
   FormatAlignLeft,
   FormatAlignRight, Inbox, LocationOn, Mail, Menu, Print, Restore, Save, Share
 } from '@mui/icons-material';
+import {DialogProto} from "./DialogProto";
+import {VariantProps} from "@react-buddy/ide-toolbox/dist/palette/palette";
+
+
+export declare const NewVariant: React.FC<VariantProps & {proto: any}>;
 
 export default () => (
   <Palette>
@@ -598,7 +603,7 @@ export default () => (
       <Component name="Alert">
         <Variant name="error">
           <Alert severity="error">This is an error alert — check it out!</Alert>
-        </Variant>    
+        </Variant>
         <Variant name="warning">
           <Alert severity="warning">This is a warning alert — check it out!</Alert>
         </Variant>
@@ -640,6 +645,9 @@ export default () => (
             </DialogActions>
           </Dialog>
         </Variant>
+        <NewVariant proto={DialogProto}>
+
+        </NewVariant>
       </Component>
       <Component name="Progress">
         <Variant name="circular">
