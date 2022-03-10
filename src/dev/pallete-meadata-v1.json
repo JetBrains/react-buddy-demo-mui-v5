@@ -1,0 +1,84 @@
+{
+  "componentsMetadata": {
+    "@mui/material/Typography": {
+      "outlineProps": ["variant", "gutterBottom", "component"],
+      "categoryProps": {
+        "someCategory1": [
+          {
+            "propertyName": "variant",
+            "order": 0
+          },
+          {
+            "propertyName": "gutterBottom",
+            "order": 1
+          }
+        ],
+        "someCategory2": [
+          {
+            "propertyName": "component",
+            "order": 0
+          }
+        ]
+      }
+    },
+    "@mui/material/Button": {
+      "outlineProps": ["variant", "sx"],
+      "categoryProps": {
+        "someCategory1": [
+          {
+            "propertyName": "variant",
+            "order": 0
+          }
+        ],
+        "someCategory2": [
+          {
+            "propertyName": "sx",
+            "order": 0
+          }
+        ]
+      }
+    },
+    "@mui/material/FormControlLabel": {
+      "outlineProps": ["value", "control", "label"],
+      "categoryProps": {
+        "someCategory1": [
+          {
+            "propertyName": "value",
+            "order": 0
+          },
+          {
+            "propertyName": "control",
+            "order": 1
+          }
+        ],
+        "someCategory2": [
+          {
+            "propertyName": "label",
+            "order": 0
+          }
+        ]
+      }
+    },
+    "@mui/material/TextField": {
+      "outlineProps": ["id", "label", "variant"],
+      "categoryProps": {
+        "someCategory1": [
+          {
+            "propertyName": "id",
+            "order": 0
+          },
+          {
+            "propertyName": "label",
+            "order": 1
+          }
+        ],
+        "someCategory2": [
+          {
+            "propertyName": "variant",
+            "order": 0
+          }
+        ]
+      }
+    }
+  }
+}
