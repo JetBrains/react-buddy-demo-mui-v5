@@ -58,13 +58,31 @@ import {
   FormatAlignRight, Inbox, LocationOn, Mail, Menu, Print, Restore, Save, Share
 } from '@mui/icons-material';
 import {DialogProto} from "./DialogProto";
+import {CurrentDate} from "./DayjsProtos";
 import {VariantProps} from "@react-buddy/ide-toolbox/dist/palette/palette";
+import {FetchedItemsProto} from "./FetchedItemsProto";
 
-
-export declare const NewVariant: React.FC<VariantProps & {proto: any}>;
+export const NewVariant: React.FC<VariantProps & {proto: any}> = () => null;
 
 export default () => (
   <Palette>
+    <Category name="Messages">
+      <Component name="dayjs">
+        <Variant>
+          <div></div>
+        </Variant>
+        <NewVariant name="Current Date" proto={CurrentDate}>
+
+        </NewVariant>
+      </Component>
+    </Category>
+    <Category name="Data">
+      <Component name="List of items">
+        <NewVariant proto={FetchedItemsProto}>
+
+        </NewVariant>
+      </Component>
+    </Category>
     <Category name="Layout">
       <Component name="Box">
         <Variant>
@@ -645,8 +663,7 @@ export default () => (
             </DialogActions>
           </Dialog>
         </Variant>
-        <NewVariant proto={DialogProto}>
-
+        <NewVariant name={"live"} proto={DialogProto}>
         </NewVariant>
       </Component>
       <Component name="Progress">
