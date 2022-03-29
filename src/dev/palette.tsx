@@ -58,22 +58,44 @@ import {
   FormatAlignRight, Inbox, LocationOn, Mail, Menu, Print, Restore, Save, Share
 } from '@mui/icons-material';
 import {DialogProto} from "./DialogProto";
-import {CurrentDate} from "./DayjsProtos";
+import {
+  CurrentDate, CurrentDateTime, CurrentTime, EndCurrentHour, EndCurrentMinute,
+  FirstDayOfMonth,
+  FirstDayOfWeek,
+  FirstDayOfYear, LastDayOfMonth,
+  LastDayOfWeek,
+  LastDayOfYear, StartCurrentHour, StartCurrentMinute, StartOfTomorrow, StartOfYesterday
+} from "./DayjsProtos";
 import {VariantProps} from "@react-buddy/ide-toolbox/dist/palette/palette";
 import {FetchedItemsProto} from "./FetchedItemsProto";
 
 export const NewVariant: React.FC<VariantProps & {proto: any}> = () => null;
 
-export default () => (
+export const PaletteTree = () => (
   <Palette>
-    <Category name="Messages">
-      <Component name="dayjs">
-        <Variant>
-          <div></div>
-        </Variant>
-        <NewVariant name="Current Date" proto={CurrentDate}>
+    <Category name="Dayjs">
+      <Component name="Date">
+        <NewVariant name="current date" proto={CurrentDate}/>
+        <NewVariant name="first day of year" proto={FirstDayOfYear}/>
+        <NewVariant name="last day of year" proto={LastDayOfYear}/>
+        <NewVariant name="first day of month" proto={FirstDayOfMonth}/>
+        <NewVariant name="last day of month" proto={LastDayOfMonth}/>
+        <NewVariant name="first day of week" proto={FirstDayOfWeek}/>
+        <NewVariant name="last day of week" proto={LastDayOfWeek}/>
+      </Component>
 
-        </NewVariant>
+      <Component name={"Time"}>
+        <NewVariant name="current time" proto={CurrentTime}/>
+        <NewVariant name="start current minute" proto={StartCurrentMinute}/>
+        <NewVariant name="end current minute" proto={EndCurrentMinute}/>
+        <NewVariant name="start current hour" proto={StartCurrentHour}/>
+        <NewVariant name="end current hour" proto={EndCurrentHour}/>
+      </Component>
+
+      <Component name={"Date-time"}>
+        <NewVariant name="current date time" proto={CurrentDateTime}/>
+        <NewVariant name="start of yesterday" proto={StartOfYesterday}/>
+        <NewVariant name="start of tomorrow" proto={StartOfTomorrow}/>
       </Component>
     </Category>
     <Category name="Data">
