@@ -2,14 +2,26 @@ import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogT
 import React, {useState} from "react";
 
 
-/**
- *
- * @param
- */
-export const DialogProto = () => {
+export enum Color {
+  RED,
+  GREEN,
+  BLUE
+}
+
+export const DialogProto = (
+  /** @caption Dialog title **/ title: string,
+  /** @caption Random number **/ number: number,
+  /** @caption Random boolean **/ boolean: boolean,
+  /** @caption Color enum **/ color: Color,
+  /** @caption Union type **/ dialogInputMode: 'none' | 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search'
+) => {
 
   // hooks
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(boolean)
+
+  const inputTitle = title
+  const inputNumber = number
+  const inputColor = color
 
   // other expressions (functions, variables)
   const handleClickOpen = () => {
@@ -27,9 +39,9 @@ export const DialogProto = () => {
       onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
-    >
+      inputMode={dialogInputMode}>
       <DialogTitle id="alert-dialog-title">
-        {"Use Google's location service?"}
+        {inputTitle}
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
