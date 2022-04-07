@@ -571,7 +571,7 @@ export const PaletteTree = () => (
           </Stepper>
         </Variant>
       </Component>
-      <Component name="Tabs">
+      <Component name="Tabs" subComponents={[<Tab label={"Label"}/>]}>
         <Variant>
           <Tabs value={0} aria-label="basic tabs example">
             <Tab label="Item One"/>
@@ -659,8 +659,16 @@ export const PaletteTree = () => (
           </Backdrop>
         </Variant>
       </Component>
-      <Component name="Dialog">
+      <Component name="Dialog" subComponents={[
+        <DialogTitle></DialogTitle>,
+        <DialogContent></DialogContent>,
+        <DialogActions></DialogActions>
+      ]}>
         <Variant>
+          <Dialog open={true}>
+          </Dialog>
+        </Variant>
+        <Variant name="template">
           <Dialog
             open={true}
             aria-labelledby="alert-dialog-title"
@@ -780,8 +788,14 @@ export const PaletteTree = () => (
           </AppBar>
         </Variant>
       </Component>
-      <Component name="Card">
+      <Component name="Card" subComponents={[
+        <CardContent></CardContent>,
+        <CardActions></CardActions>
+      ]}>
         <Variant>
+          <Card></Card>
+        </Variant>
+        <Variant name={"template"}>
           <Card variant="outlined">
             <CardContent>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>

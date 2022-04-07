@@ -1,10 +1,9 @@
 import * as React from 'react';
-import {Button, Card, CardActions, CardContent, Container, Stack} from "@mui/material";
-import {useState} from "react";
-import dayjs from "dayjs";
+import {Container} from "@mui/material";
 
 export default function App() {
   return (
-    <Container maxWidth="sm"></Container>
+    <Container maxWidth="sm">
+    </Container>
   );
 }
