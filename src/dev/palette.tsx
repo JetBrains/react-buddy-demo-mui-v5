@@ -69,40 +69,38 @@ import {
 import {VariantProps} from "@react-buddy/ide-toolbox/dist/palette/palette";
 import {FetchedItemsProto} from "./FetchedItemsProto";
 
-export const NewVariant: React.FC<VariantProps & {proto: any}> = () => null;
-
 export const PaletteTree = () => (
   <Palette>
     <Category name="Dayjs">
       <Component name="Date">
-        <NewVariant name="current date" proto={CurrentDate}/>
-        <NewVariant name="first day of year" proto={FirstDayOfYear}/>
-        <NewVariant name="last day of year" proto={LastDayOfYear}/>
-        <NewVariant name="first day of month" proto={FirstDayOfMonth}/>
-        <NewVariant name="last day of month" proto={LastDayOfMonth}/>
-        <NewVariant name="first day of week" proto={FirstDayOfWeek}/>
-        <NewVariant name="last day of week" proto={LastDayOfWeek}/>
+        <Variant name="current date" proto={CurrentDate}/>
+        <Variant name="first day of year" proto={FirstDayOfYear}/>
+        <Variant name="last day of year" proto={LastDayOfYear}/>
+        <Variant name="first day of month" proto={FirstDayOfMonth}/>
+        <Variant name="last day of month" proto={LastDayOfMonth}/>
+        <Variant name="first day of week" proto={FirstDayOfWeek}/>
+        <Variant name="last day of week" proto={LastDayOfWeek}/>
       </Component>
 
       <Component name={"Time"}>
-        <NewVariant name="current time" proto={CurrentTime}/>
-        <NewVariant name="start current minute" proto={StartCurrentMinute}/>
-        <NewVariant name="end current minute" proto={EndCurrentMinute}/>
-        <NewVariant name="start current hour" proto={StartCurrentHour}/>
-        <NewVariant name="end current hour" proto={EndCurrentHour}/>
+        <Variant name="current time" proto={CurrentTime}/>
+        <Variant name="start current minute" proto={StartCurrentMinute}/>
+        <Variant name="end current minute" proto={EndCurrentMinute}/>
+        <Variant name="start current hour" proto={StartCurrentHour}/>
+        <Variant name="end current hour" proto={EndCurrentHour}/>
       </Component>
 
       <Component name={"Date-time"}>
-        <NewVariant name="current date time" proto={CurrentDateTime}/>
-        <NewVariant name="start of yesterday" proto={StartOfYesterday}/>
-        <NewVariant name="start of tomorrow" proto={StartOfTomorrow}/>
+        <Variant name="current date time" proto={CurrentDateTime}/>
+        <Variant name="start of yesterday" proto={StartOfYesterday}/>
+        <Variant name="start of tomorrow" proto={StartOfTomorrow}/>
       </Component>
     </Category>
     <Category name="Data">
       <Component name="List of items">
-        <NewVariant proto={FetchedItemsProto}>
+        <Variant proto={FetchedItemsProto}>
 
-        </NewVariant>
+        </Variant>
       </Component>
     </Category>
     <Category name="Layout">
@@ -685,8 +683,8 @@ export const PaletteTree = () => (
             </DialogActions>
           </Dialog>
         </Variant>
-        <NewVariant name={"live"} proto={DialogProto}>
-        </NewVariant>
+        <Variant name={"live"} proto={DialogProto}>
+        </Variant>
       </Component>
       <Component name="Progress">
         <Variant name="circular">
