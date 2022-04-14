@@ -492,6 +492,9 @@ export const PaletteTree = () => (
       </Component>
       <Component name="Menu">
         <Variant>
+          <MenuList></MenuList>
+        </Variant>
+        <Variant name="example">
           <MenuList>
             <MenuItem>
               <ListItemIcon>
@@ -573,6 +576,10 @@ export const PaletteTree = () => (
       </Component>
       <Component name="Tabs" subComponents={[<Tab label={"Label"}/>]}>
         <Variant>
+          <Tabs value={0} aria-label="basic tabs example">
+          </Tabs>
+        </Variant>
+        <Variant name="example">
           <Tabs value={0} aria-label="basic tabs example">
             <Tab label="Item One"/>
             <Tab label="Item Two"/>
