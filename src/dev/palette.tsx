@@ -69,7 +69,7 @@ import {
 import {VariantProps} from "@react-buddy/ide-toolbox/dist/palette/palette";
 import {FetchedItemsProto} from "./FetchedItemsProto";
 
-export const PaletteTree = () => (
+export const ProjectPalette = () => (
   <Palette>
     <Category name="Dayjs">
       <Component name="Date">
