@@ -67,7 +67,7 @@ import {
   LastDayOfYear, StartCurrentHour, StartCurrentMinute, StartOfTomorrow, StartOfYesterday
 } from "./DayjsProtos";
 import {VariantProps} from "@react-buddy/ide-toolbox/dist/palette/palette";
-import {FetchedItemsProto} from "./FetchedItemsProto";
+import {FetchedItemsProto, ProductProto} from "./FetchedItemsProto";
 
 export const ProjectPalette = () => (
   <Palette>
@@ -101,6 +101,10 @@ export const ProjectPalette = () => (
         <Variant proto={FetchedItemsProto}>
 
         </Variant>
+        <Variant proto={ProductProto}/>
+      </Component>
+      <Component name={"Product"}>
+        <Variant proto={ProductProto}/>
       </Component>
     </Category>
     <Category name="Layout">
