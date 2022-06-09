@@ -40,12 +40,12 @@ export default function App() {
       totalDownloads: '857'
     }]);
 
+  const title = 'Dialog';
+
 
   return (
     <Container maxWidth="sm">
-      {products.map((product) => {
 
-      })}
     </Container>
   );
 }
