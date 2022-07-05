@@ -1,11 +1,15 @@
-import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
-import React, {useState} from "react";
+import {Alert, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
+import React, {useContext, useRef, useState} from "react";
 
 
 export enum Color {
   RED,
   GREEN,
   BLUE
+}
+
+function generateDisplayame(inputTitle: string) {
+  return undefined;
 }
 
 export const DialogProto = (
@@ -41,7 +45,7 @@ export const DialogProto = (
       aria-describedby="alert-dialog-description"
       inputMode={dialogInputMode}>
       <DialogTitle id="alert-dialog-title">
-        {inputTitle}
+        {generateDisplayame(inputTitle)}
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
@@ -55,6 +59,7 @@ export const DialogProto = (
           Agree
         </Button>
       </DialogActions>
+      <Alert severity="info">This is an info alert — check it out!</Alert>
     </Dialog>
   );
 }

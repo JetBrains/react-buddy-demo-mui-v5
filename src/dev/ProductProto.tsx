@@ -2,14 +2,12 @@ import {Avatar, Box, Card, CardContent, Divider, Grid, Typography} from "@mui/ma
 import * as React from "react";
 
 export const ProductProto = (
-  /** @caption */ product: {
     id: number,
     createdAt: string,
     description: string,
     media: string,
     title: string,
     totalDownloads: string
-  }
 ) => {
   return (
     <Card
@@ -30,7 +28,7 @@ export const ProductProto = (
         >
           <Avatar
             alt="Product"
-            src={product.media}
+            src={media}
             variant="square"
           />
         </Box>
@@ -40,14 +38,14 @@ export const ProductProto = (
           gutterBottom
           variant="h5"
         >
-          {product.title}
+          {title}
         </Typography>
         <Typography
           align="center"
           color="textPrimary"
           variant="body1"
         >
-          {product.description}
+          {description}
         </Typography>
       </CardContent>
       <Box sx={{flexGrow: 1}}/>
@@ -87,7 +85,7 @@ export const ProductProto = (
               sx={{pl: 1}}
               variant="body2"
             >
-              {product.totalDownloads}
+              {totalDownloads}
               Downloads
             </Typography>
           </Grid>

@@ -41,7 +41,7 @@ export default function App() {
     }]);
 
   const title = 'Dialog';
-
+  const count = 0
 
   return (
     <Container maxWidth="sm">
