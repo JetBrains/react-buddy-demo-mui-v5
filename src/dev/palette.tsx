@@ -8,7 +8,7 @@ import {
 import {
   Accordion, AccordionDetails, AccordionSummary,
   Alert, AppBar,
-  Autocomplete, Avatar, AvatarGroup, Backdrop, Badge,
+  Autocomplete, Avatar, Backdrop, Badge,
   BottomNavigation,
   BottomNavigationAction,
   Box,
@@ -41,7 +41,7 @@ import {
   Select, Skeleton,
   Slider, Snackbar, SpeedDial, SpeedDialAction, SpeedDialIcon,
   Stack, Step, StepLabel, Stepper,
-  Switch, Tab, Tabs,
+  Switch, Tab, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tabs,
   TextField,
   ToggleButton,
   ToggleButtonGroup, Toolbar, Tooltip,
@@ -57,64 +57,21 @@ import {
   FormatAlignLeft,
   FormatAlignRight, Inbox, LocationOn, Mail, Menu, Print, Restore, Save, Share
 } from '@mui/icons-material';
-import {DialogProto} from "./DialogProto";
-import {
-  CurrentDate, CurrentDateTime, CurrentTime, EndCurrentHour, EndCurrentMinute,
-  FirstDayOfMonth,
-  FirstDayOfWeek,
-  FirstDayOfYear, LastDayOfMonth,
-  LastDayOfWeek,
-  LastDayOfYear, StartCurrentHour, StartCurrentMinute, StartOfTomorrow, StartOfYesterday
-} from "./DayjsProtos";
-import {VariantProps} from "@react-buddy/ide-toolbox/dist/palette/palette";
-import {FetchedItemsProto} from "./FetchedItemsProto";
 
-export const ProjectPalette = () => (
+export default () => (
   <Palette>
-    <Category name="Dayjs">
-      <Component name="Date">
-        <Variant name="current date" proto={CurrentDate}/>
-        <Variant name="first day of year" proto={FirstDayOfYear}/>
-        <Variant name="last day of year" proto={LastDayOfYear}/>
-        <Variant name="first day of month" proto={FirstDayOfMonth}/>
-        <Variant name="last day of month" proto={LastDayOfMonth}/>
-        <Variant name="first day of week" proto={FirstDayOfWeek}/>
-        <Variant name="last day of week" proto={LastDayOfWeek}/>
-      </Component>
-
-      <Component name={"Time"}>
-        <Variant name="current time" proto={CurrentTime}/>
-        <Variant name="start current minute" proto={StartCurrentMinute}/>
-        <Variant name="end current minute" proto={EndCurrentMinute}/>
-        <Variant name="start current hour" proto={StartCurrentHour}/>
-        <Variant name="end current hour" proto={EndCurrentHour}/>
-      </Component>
-
-      <Component name={"Date-time"}>
-        <Variant name="current date time" proto={CurrentDateTime}/>
-        <Variant name="start of yesterday" proto={StartOfYesterday}/>
-        <Variant name="start of tomorrow" proto={StartOfTomorrow}/>
-      </Component>
-    </Category>
-    <Category name="Data">
-      <Component name="List of items">
-        <Variant proto={FetchedItemsProto}>
-
-        </Variant>
-      </Component>
-    </Category>
     <Category name="Layout">
       <Component name="Box">
         <Variant>
-          <Box></Box>
+          <Box>Content</Box>
         </Variant>
       </Component>
       <Component name="Container">
         <Variant>
-          <Container maxWidth="sm"></Container>
+          <Container maxWidth="sm">Content</Container>
         </Variant>
         <Variant name="fixed">
-          <Container fixed></Container>
+          <Container fixed>Content</Container>
         </Variant>
       </Component>
       <Component name="Stack">
@@ -142,16 +99,16 @@ export const ProjectPalette = () => (
         <Variant>
           <Grid container spacing={2}>
             <Grid item xs={6} md={8}>
-              <Box>xs=6 md=8</Box>
+              <Paper>xs=6 md=8</Paper>
             </Grid>
             <Grid item xs={6} md={4}>
-              <Box>xs=6 md=4</Box>
+              <Paper>xs=6 md=4</Paper>
             </Grid>
             <Grid item xs={6} md={4}>
-              <Box>xs=6 md=4</Box>
+              <Paper>xs=6 md=4</Paper>
             </Grid>
             <Grid item xs={6} md={8}>
-              <Box>xs=6 md=8</Box>
+              <Paper>xs=6 md=8</Paper>
             </Grid>
           </Grid>
         </Variant>
@@ -605,12 +562,12 @@ export const ProjectPalette = () => (
         <Variant>
           <Chip label="Chip Filled"/>
         </Variant>
-        <Variant name="filled">
+        <Variant name="outlined">
           <Chip label="Chip Outlined" variant="outlined"/>
         </Variant>
       </Component>
       <Component name="Divider">
-        <Variant>
+        <Variant previewLayout="stretch" style={{padding: 10}}>
           <Divider/>
         </Variant>
       </Component>
@@ -634,6 +591,30 @@ export const ProjectPalette = () => (
               </ListItemButton>
             </ListItem>
           </List>
+        </Variant>
+      </Component>
+      <Component name="Table">
+        <Variant>
+          <TableContainer component={Paper}>
+            <Table aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Label 1</TableCell>
+                  <TableCell>Label 2</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>value 1</TableCell>
+                  <TableCell>value 2</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>value 1</TableCell>
+                  <TableCell>value 2</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
         </Variant>
       </Component>
       <Component name="Tooltip">
@@ -698,14 +679,12 @@ export const ProjectPalette = () => (
             </DialogActions>
           </Dialog>
         </Variant>
-        <Variant name={"live"} proto={DialogProto}>
-        </Variant>
       </Component>
       <Component name="Progress">
         <Variant name="circular">
           <CircularProgress />
         </Variant>
-        <Variant name="linear">
+        <Variant name="linear" previewLayout="stretch" style={{padding: 10}}>
           <LinearProgress />
         </Variant>
       </Component>
@@ -721,10 +700,10 @@ export const ProjectPalette = () => (
           <Skeleton variant="text" />
         </Variant>
         <Variant name="circular">
-          <Skeleton variant="circular" />
+          <Skeleton variant="circular" width={40} height={40} />
         </Variant>
         <Variant name="rectangular">
-          <Skeleton variant="rectangular" />
+          <Skeleton variant="rectangular" width={210} height={60} />
         </Variant>
       </Component>
       <Component name="Snackbar">
@@ -830,29 +809,8 @@ export const ProjectPalette = () => (
         <Variant>
           <Paper>elevation 0</Paper>
         </Variant>
-        <Variant name="elevation 1">
-          <Paper elevation={1}>elevation 1</Paper>
-        </Variant>
-        <Variant name="elevation 2">
-          <Paper elevation={2}>elevation 2</Paper>
-        </Variant>
-        <Variant name="elevation 3">
-          <Paper elevation={3}>elevation 3</Paper>
-        </Variant>
-        <Variant name="elevation 4">
-          <Paper elevation={4}>elevation 4</Paper>
-        </Variant>
-        <Variant name="elevation 6">
-          <Paper elevation={6}>elevation 6</Paper>
-        </Variant>
         <Variant name="elevation 8">
           <Paper elevation={8}>elevation 8</Paper>
-        </Variant>
-        <Variant name="elevation 12">
-          <Paper elevation={12}>elevation 12</Paper>
-        </Variant>
-        <Variant name="elevation 16">
-          <Paper elevation={16}>elevation 16</Paper>
         </Variant>
         <Variant name="elevation 24">
           <Paper elevation={24}>elevation 24</Paper>
